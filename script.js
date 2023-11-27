@@ -1,17 +1,17 @@
 let button = document.querySelector(".button");
 let operadores = document.querySelector(".gray");
+let input = document.querySelector("#display");
+let history = document.querySelector("#history");
 let operar = '';
-let valor1;
-let valor2;
+
 
 function add_numero (numero) {
-    if(valor1 == ""){
-        valor1 = numero;
+    if(operar =! ''){
+        input.value += numero;
     }
-    else{
-        valor2 = numero;
+    if(operar == ''){
+        input.value+=numero;
     }
-    console.log(valor1)
 }
 
 function add_operador(operador){
@@ -19,9 +19,18 @@ function add_operador(operador){
     if(operador == "-"){operar = "-"};
     if(operador == "*"){operar = "*"};
     if(operador == "/"){operar = "/"};
-    console.log(operar);
+    input.value+=operador
+    console.log(input.value);
+  
 }
 
-if(operar!= ""){
-    add_numero(numero);
+function total(){
+    let guardar = input.value;
+    history.innerHTML = guardar;
+    guardar.toString();
+    input.value = eval(guardar);
+    console.log((eval(guardar)));
+  
 }
+
+
