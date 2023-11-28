@@ -10,7 +10,7 @@
     <div class="calculator">
         <!-- DISPLAY -->
         <div class="display">
-            <input id="display" placeholder="0" disabled>
+            <input id="display" placeholder="0" disabled autocomplete="off">
             <h2 id="history"></h2>
         </div>
 
@@ -27,6 +27,7 @@
             <button class="button" onclick="add_numero(8)">8</button>
             <button class="button" onclick="add_numero(9)">9</button>
             <button class="button gray" onclick="add_operador('*')">*</button>
+            <button class="button gray" onclick="add_operador('^')">^</button>
         </div>
 
         <div class="row">
@@ -34,6 +35,7 @@
             <button class="button" onclick="add_numero(5)">5</button>
             <button class="button" onclick="add_numero(6)">6</button>
             <button class="button gray" onclick="add_operador('-')">-</button>
+            <button class="button gray" onclick="calcularRaiz()">sqrt</button>
         </div>
 
         <div class="row">
