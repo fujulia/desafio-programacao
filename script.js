@@ -1,10 +1,7 @@
-let button = document.querySelector(".button");
-let operadores = document.querySelector(".gray");
 let input = document.querySelector("#display");
 let history = document.querySelector("#history");
 let btnIgual = document.getElementById("btnIgual");
 let operar = '';
-let raiz;
 
 function add_numero(numero) {
     if (operar = ! '') {
@@ -17,8 +14,16 @@ function add_numero(numero) {
 }
 
 function add_operador(operador) {
-    operar = operador;
-    input.value += operar
+    if(operador == "sqrt"){
+       let raiz = Math.sqrt(input.value);
+       console.log(raiz);
+       input.value = raiz;
+    }
+    else{
+        operar = operador;
+        input.value += operar
+    }
+    btnIgual.focus();
 }
 
 document.addEventListener('keydown', function (event) {
@@ -44,8 +49,4 @@ function limpar() {
     input.value = '';
 }
 
-function calcularRaiz(){
-    input.toString();
-    raiz = Math.sqrt(input.value);
-}
 
