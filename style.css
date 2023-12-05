@@ -19,13 +19,12 @@
     border: none;
     display: flex;
     align-items: center;
-    height: 40%;
     font-size: 50px;
     width: 90%;
     text-align: right;
     margin: 10px;
     background-color: #38393d;
-    color: white;
+    color:#b2c8ff ;
 
 }
 
@@ -35,7 +34,7 @@
     display: flex;
     justify-content: right;
     margin-right: 32px;
-    color:#b2c8ff ;
+    
     font-size: 35px;
 }
 
