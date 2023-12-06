@@ -19,7 +19,7 @@ function add_operador(operador) {
 
 document.addEventListener('keydown', function (event) {
     console.log(event.key)
-    if (!isNaN(event.key) || event.key == "/" || event.key == "*" || event.key == "+" || event.key == "-") {
+    if (!isNaN(event.key) || event.key == "/" || event.key == "*" || event.key == "+" || event.key == "-" || event.key == ".") {
         input.value = input.value + event.key;
     }
     if(event.key == "Enter"){
@@ -38,6 +38,8 @@ function total() {
 
 function limpar() {
     input.value = '';
+    history.textContent = "";
+    btnIgual.focus();
 }
 
 
